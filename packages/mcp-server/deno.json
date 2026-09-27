@@ -1,0 +1,16 @@
+{
+  "name": "@chainops/mcp-server",
+  "version": "0.1.0",
+  "imports": {
+    "@modelcontextprotocol/server": "npm:@modelcontextprotocol/server@^2.0.0",
+    "@modelcontextprotocol/server/stdio": "npm:@modelcontextprotocol/server@^2.0.0/stdio",
+    "zod/v4": "npm:zod@^4.0.0/v4"
+  },
+  "tasks": {
+    "dev": "deno run --allow-env --allow-read --allow-run=forge src/main.ts",
+    "start": "deno run --allow-env --allow-read --allow-run=forge src/main.ts",
+    "check": "deno check src/main.ts",
+    "fmt": "deno fmt",
+    "lint": "deno lint"
+  }
+}
