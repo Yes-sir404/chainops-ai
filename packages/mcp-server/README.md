@@ -27,7 +27,9 @@ On PowerShell:
 
 ```powershell
 $env:CHAINOPS_WORKSPACE_ROOT="../contracts"
-deno task start
+$env:CHAINOPS_COMPILE_TIMEOUT_MS="60000"
+$env:CHAINOPS_TEST_TIMEOUT_MS="120000"
+deno task startt
 ```
 
 The server uses stdio. Do not print normal application logs to stdout; stdout is reserved for MCP protocol traffic.  
