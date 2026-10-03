@@ -2,9 +2,10 @@
 
 Local MCP server exposing tightly-scoped smart-contract engineering tools.
 
-## V0.1 tool
+## V0.1 tools
 
 - `compile_contract` — invokes `forge build` only inside `CHAINOPS_WORKSPACE_ROOT`.
+- `run_unit_tests` — invokes `forge test` only inside `CHAINOPS_WORKSPACE_ROOT`.
 
 ## Requirements
 
@@ -16,7 +17,9 @@ Local MCP server exposing tightly-scoped smart-contract engineering tools.
 From `packages/mcp-server`:
 
 ```bash
-export CHAINOPS_WORKSPACE_ROOT=../contracts
+$env:CHAINOPS_WORKSPACE_ROOT="../contracts"
+$env:CHAINOPS_COMPILE_TIMEOUT_MS="60000"
+$env:CHAINOPS_TEST_TIMEOUT_MS="120000"
 deno task start
 ```
 

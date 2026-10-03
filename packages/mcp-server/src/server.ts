@@ -1,6 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/server";
 import { loadConfig } from "./config.ts";
 import { registerCompileContractTool } from "./tools/compile_contract.ts";
+import { registerRunUnitTestsTool } from "./tools/run_unit_tests.ts";
 
 export async function createChainOpsServer(): Promise<McpServer> {
   const config = await loadConfig();
@@ -11,6 +12,7 @@ export async function createChainOpsServer(): Promise<McpServer> {
   });
 
   registerCompileContractTool(server, config);
+  registerRunUnitTestsTool(server, config);
 
   return server;
 }
