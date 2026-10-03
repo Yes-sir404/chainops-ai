@@ -17,9 +17,9 @@ Local MCP server exposing tightly-scoped smart-contract engineering tools.
 From `packages/mcp-server`:
 
 ```bash
-$env:CHAINOPS_WORKSPACE_ROOT="../contracts"
-$env:CHAINOPS_COMPILE_TIMEOUT_MS="60000"
-$env:CHAINOPS_TEST_TIMEOUT_MS="120000"
+export CHAINOPS_WORKSPACE_ROOT="../contracts"
+export CHAINOPS_COMPILE_TIMEOUT_MS=60000
+export CHAINOPS_TEST_TIMEOUT_MS=120000
 deno task start
 ```
 
