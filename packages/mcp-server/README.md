@@ -30,4 +30,4 @@ $env:CHAINOPS_WORKSPACE_ROOT="../contracts"
 deno task start
 ```
 
-The server uses stdio. Do not print normal application logs to stdout; stdout is reserved for MCP protocol traffic.
+The server uses stdio. Do not print normal application logs to stdout; stdout is reserved for MCP protocol traffic.  
