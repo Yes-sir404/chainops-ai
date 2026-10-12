@@ -23,10 +23,10 @@ __pycache__/
 **/target/
 
 # Foundry
-packages/contracts/cache/
-packages/contracts/out/
-packages/contracts/broadcast/
-packages/contracts/lib/
+packages/contracts/**/cache/
+packages/contracts/**/out/
+packages/contracts/**/broadcast/
+packages/contracts/**/lib/
 
 # Local data
 .data/
