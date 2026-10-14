@@ -11,10 +11,14 @@ export async function assertPathInsideWorkspace(
   const root = await Deno.realPath(workspaceRoot);
 
   const separator = root.includes("\\") ? "\\" : "/";
-  const rootWithSeparator = root.endsWith(separator) ? root : `${root}${separator}`;
+  const rootWithSeparator = root.endsWith(separator)
+    ? root
+    : `${root}${separator}`;
 
   if (target !== root && !target.startsWith(rootWithSeparator)) {
-    throw new Error(`Path is outside the allowed ChainOps workspace: ${requestedPath}`);
+    throw new Error(
+      `Path is outside the allowed ChainOps workspace: ${requestedPath}`,
+    );
   }
 
   return target;
