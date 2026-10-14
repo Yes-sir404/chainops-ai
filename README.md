@@ -114,12 +114,47 @@ Expected structured result:
 - execution errors returned to the model as tool errors
 - MCP stdout kept separate from diagnostic stderr
 
-## Next sprint
+## Development
 
-1. `run_unit_tests` MCP tool
-2. Python FastAPI agent runtime
-3. explicit MCP client
-4. PlannerAgent
-5. SolidityDeveloperAgent
-6. TestingAgent
-7. bounded generate → compile → test → repair loop
+For Linux setup, local validation, MCP commands, environment variables, troubleshooting, and CI instructions, see:
+
+[`docs/development.md`](docs/development.md)
+
+## Current v0.1.0 foundation
+
+The current development foundation includes:
+
+- `compile_contract` MCP tool
+- `run_unit_tests` MCP tool
+- Foundry contract test fixtures
+- automated MCP integration tests
+- workspace path isolation
+- process timeouts
+- GitHub Actions continuous integration
+
+## Next
+
+The next phase introduces the agent runtime and the first bounded agentic workflow:
+
+```text
+requirement
+    ↓
+Planner Agent
+    ↓
+Solidity Developer Agent
+    ↓
+compile_contract
+    ↓
+run_unit_tests
+    ↓
+bounded repair loop
+```
+
+Planned next components:
+
+1. Python FastAPI agent runtime
+2. explicit MCP client
+3. Planner Agent
+4. Solidity Developer Agent
+5. Testing Agent
+6. bounded generate → compile → test → repair loop
